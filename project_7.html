@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Q4.Sum Of Even Odd </p>
+    <script>
+        let arr5 = new Array(1,2,3,4,5,6,7,8,9);
+        let array = new Array(0,0);
+        oddeven=(arr5, array)=>{
+            for(let i=0; i<arr5.length; i++){
+                if (arr5[i]%2 == 0) {
+                    array[0] += arr5[i];
+                }else{
+                    array[1] += arr5[i];
+                }
+            }
+            return document.write("Sum of Even Number " + array[0] + " Sum Of Odd Number " + array[1]);
+        }
+        oddeven(arr5, array);
+    </script>
+
+    <p>Q5. Find whether the number is present or not </p>
+    <script>
+        let per = new Array(1,2,3,4,5,6);
+        find_num=(num, per)=>{
+            for(let i=0; i<per.length; i++){
+                if(num == per[i]){
+                    return document.write("Yes");
+                    break
+                }
+            }
+            return document.write("No");
+        }
+        find_num(5, per);
+    </script>
+
+    <p>Q6.Find Higher Age </p>
+    <script>
+        let age = new Array(18,14,18,20,15);
+
+        find_age=()=>{
+
+            for(let i=0; i<age.length; i++){
+            
+                if (age[i]>=18) {
+                   return document.write("Your are 18 Plus " + `${age[i]}`);
+                   break; 
+                }else{
+                    return document.write("Sorry Your Not 18 Plus " + age[i]);
+                }
+            }
+        }
+        find_age(age);
+    </script>
+
+    <p>Q7. Increment the Array Elements </p>
+    <script>
+        let increment = new Array(1,2,1,4,5,3,6,5);
+
+        ince_arr=()=>{
+            let temp;
+            for(let i=0; i<increment.length; i++){
+                for(let j=i+1; j<increment.length; j++){
+                    if (increment[i] > increment[j]) {
+                        temp = increment[i];
+                        increment[i] = increment[j];
+                        increment[j] = temp;
+                    }
+                }
+            }
+            for(let i=0; i<increment.length; i++){
+                document.write(increment[i])
+            }
+        }
+        ince_arr(increment);
+    </script>
+
+    <p>Q8. Pass or Fail </p>
+    <script>
+        let results = new Array(33,33,80,99);
+        find_result=()=>{
+            for(let i=0; i<results.length; i++){
+                if (results[i]<32) {
+                    return document.write("Your Fail the Test");
+                }
+            }
+            return document.write("Your Pass The Test");
+        }
+        find_result(results);
+    </script>
+
+    <p>Q10. Min and Max value</p>
+    <script>
+        let mix = new Array(21,23,56,184,5,98,99);
+        let min = mix[0];
+        let max = mix[0];
+
+        find_min_max=()=>{
+            for(let i=0; i<mix.length; i++){
+                if (mix[i]>max) {
+                    max = mix[i];
+                }else if (min>mix[i]){
+                    min = mix[i]
+                }
+            }
+            return document.write("The Maxmimum Value "+ max + " The Minimum Value " + min);
+        }
+        find_min_max(mix)
+    </script>
+</body>
+</html>
