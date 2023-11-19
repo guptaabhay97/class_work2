@@ -32,7 +32,7 @@
         result(marks)
     </script> -->
 
-    <script>
+    <!-- <script>
 
         let tab = ["Abhay","mohit","nipun","Harshit"];
 
@@ -50,7 +50,53 @@
         }
         result();
 
+    </script> -->
+        <!-- <input type="text" id="searchbar" onkeyup="search_emp()">
+        <table>
+            <th>Emp Name</th>
+            <br>
+            <td class="emp_name">Abhay</td>
+            <td class="emp_name">mohit</td>
+            <td class="emp_name">Nipun</td>
+            <td class="emp_name">Harshit</td>
+            <td class="emp_name">Arpan</td>
+        </table> -->
+
+    <script>    
+        // JavaScript code
+    function emp_name() {
+        let input = prompt("Ener Employee Name");
+            input = input.toLowerCase();
+        let emp = ["abhay","mohit","nipun","harshit"];
+        for(i=0; i < emp.length; i++){
+
+            if ( emp[i].toLowerCase().includes(input)) {
+                console.log(emp[i]);
+                return;
+            }
+        }
+        console.log("not found");
+    }
+    emp_name();
     </script>
+
+    <!-- <script>
+        
+
+        getValue =()=>{
+            var search = prompt("enter value");
+            search = search.toLowerCase();
+            var arr = ["abhay", "mohit", "nipun", "harshit"];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].toLowerCase().includes(search)) {
+                    console.log(arr[i]);
+                    return;
+                }  //else console.log("value not found");
+            }
+            console.log("value not found");
+        }
+        getValue();
+    </script> -->
 
 
 </body>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+</head>
+<body>
+    <p>Q1. Count Characters   Exmp = "AbhAy"</p>
+    <script>
+        const countchar=(str)=>{
+            let space = "";
+            for(let i=0; i<str.length; i++){
+                if(str.charCodeAt(i)>=65 && str.charCodeAt(i)<=90){
+                    space+= " 1";
+                }
+            }
+            return document.write(space);
+        }
+        countchar("AbhAy");
+    </script>
+
+    <p>Q2. Count the repeated characters in a string  Exmp = "Abhay is A Good Boy"; </p>
+
+    <script>
+        const char_Count=(str)=>{
+
+            let count = "";
+
+            for(let i=0; i<str.length; i++){
+                let counts = 1;
+
+                for(let j=1+i; j<=str.length; j++){
+                    if (str.charAt(i)==str.charAt(j)) {
+                        counts++;
+                    }
+                }
+                if(counts>=2){
+                    document.write(`${str.charAt(i)} ${count}`);
+                }
+            }
+        }
+        char_Count("Abhay is A Good Boy")
+    </script>
+
+    <p>Q3. Count vowels in a string ""Abhay Gupta oe"; </p>
+
+    <script>
+        let str = "Abhay Gupta oe";
+        let str1 = str.toUpperCase();
+        let count = 0; 
+        count_vol=(str)=>{
+            for (let i = 0; i < str.length; i++) {
+                if (str1.charAt(i)=="A" || str1.charAt(i)=="E" || str1.charAt(i)=="I" || str1.charAt(i)=="O" || str1.charAt(i)=="U") {
+                    count++;
+                }
+                
+            }
+            return document.write(count);
+        }
+        count_vol(str);
+
+    </script>
+
+    <p> Q4. Find Length</p>
+     <script>
+        let strs ="Abhay GUpta";
+        find_length=(strs)=>{
+            return document.write(strs.length);
+        }
+        find_length(strs);
+     </script>
+
+     <p>Q5. Find the Winner</p>
+
+     <script>
+        let A = 0;
+        let M = 0; 
+        winner=(str2)=>{
+            for(let i=0; i<str2.length; i++ ){
+                if (str2.charAt(i)=='A') {
+                    A++;
+                }else{
+                    M++;
+                }
+            }
+            if(A>M){
+                return document.write("Abhay Win The Match");
+            }else if (M>A) {
+                return document.write("Mohit Win The Match");
+            }else{
+                return document.write("Draw");
+            }
+        }
+        winner("AAMM")
+     </script>
+
+
+    <p>Q6. Join Strings </p>
+    <script>
+        joinSting=(str2, str3)=>{
+            return document.write(str2+str3);
+            return document.write(str2.concat(str3));
+        }
+        joinSting("Abhay", "Gupta");
+    </script>
+
+    <p>Q7. Plaindrome Check </p>
+    <script>
+        let space = "";
+        let str3 = "NAMAN";
+        check=()=>{
+            for(let i = str3.length-1; i>=0; i--){
+                space+=str3[i];
+            }
+            if (str3 == space) {
+                return document.write(`True ${space} is equal to ${str3}`);
+            }else{
+                return document.write(`Flase ${space} is Not Equal to ${str3}`);
+            }
+        }
+        check(str3);
+    </script>
+
+
+    <p>Q8. Reverse the String</p>
+    <script>
+        let reverse = "";
+        let str4 = " atpuG yahbA ma I"
+        let j = str4.length-1; 
+        check_str=()=>{
+            for(let i = j; i > 0 ; i-- ){
+                reverse+=str4[i];
+            }
+            return document.write(reverse);
+        }
+        check_str(str4);
+    </script>
+
+    <p> Q9. Match the Strings</p>
+    <script>
+         let match_str1 = "Abhay";
+         let match_str2 = "Abhay";
+
+         match_string=()=>{
+            if (match_str1== match_str2) {
+                return document.write("Sting Macted");
+            }else{
+                return document.write("Sting not Macted");
+            }
+         }
+         match_string(match_str1, match_str2);
+    </script>
+    <p>Q10. String Replace</p>
+    <script>
+
+        replace_str=(str)=>{
+            return document.write(str.replace("You , Abhay gupta",));
+        }
+        replace_str("hi, Mohit Gupta");
+    </script>
+    <p>Q12. Split the String</p>
+    <script>
+        split_str=(str)=>{
+            return document.write(str.split(""))
+        }
+        split_str("Abhay GUpta")
+    </script>
+
+    <p> Q13. Count the Vowels and Consonants</p>
+    <script>
+        let vol = 0;
+        let concsonants = 0;
+        cont_vol=(str)=>{
+            let str1 = str.toUpperCase();
+            for(let i=0; i<str.length; i++){
+                if (str1.charAt(i) == "A" || str1.charAt(i) == "E" || str1.charAt(i) == "I" || str1.charAt(i) == "O" || str1.charAt(i) == "U") {
+                    vol++;
+                }else{
+                    concsonants++;
+                }
+            }
+            document.write(`Vowels is ${vol}`);
+            document.write(`Concsonants is ${concsonants}`);
+        }
+        count_vol("Abhay Gupta");
+    </script>
+</body>
+</html>

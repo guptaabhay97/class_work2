@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 5</title>
+</head>
+<body>
+    <p>create a single object using an object literal.</p>
+    <script>
+        // let person = {
+        //     fname : "Abhay",
+        //     lname : "Gupta",
+        //     age : 27,
+        // }
+        // document.write(person.fname+" "+person.lname+" "+person.age);
+
+        // let person = {};
+        // person.fname = "Abhay";
+        // person.lname = "Gupta";
+        // person.age = 27;
+
+        // document.write(person.fname+" "+person.lname+" "+person.age);
+        
+        // for(let x in person){
+        //     text = +person[x];
+        // }
+        // document.write(text);
+
+    </script>
+    <p>by new keyword </p>
+    <script>
+        // let person = new Object();
+        // person.fname = "Abhay";
+        // person.lname = "Gupta";
+        // person.age = 27;
+        // document.write(person.fname+" "+person.lname+" "+person.age+ "<br>");
+        // let x = person;
+        // x.age = 29;
+        // document.write(person.fname+" "+person.lname+" "+person.age);
+    </script>
+    <p>Q1. Create a Function </p>
+    <script>
+        const person = {
+            fname : "Abhay",
+            lname : "Gupta",
+            age : 27,
+            user:function () {
+               return("My Name is " + person.fname+ " " + person.lname+" "+ " And I'm " + person.age + " Year Old <br> " ) ;
+            }
+        }
+        document.write(person.user());
+
+        function user(name){
+            this.name = name;
+        }
+        user(document.write("Nipun <br>"));
+
+
+        let users = {
+            name:"Mohit",
+            get text(){
+               return  this.name;
+            }
+        }
+        document.write(users.text);
+        
+    </script>
+
+    <p>Q2. Delete a Parameter </p>
+    
+        <script>
+            let stud = {
+                fname : "Abhay",
+                lname : "Gupta",
+                age : 27,
+                class : "unknown",
+                get res(){
+                return `${this.fname} ${this.lname} ${this.age} ${this.class}`;
+                }
+            }
+            document.write(stud.res);
+            delete stud.class;
+            document.write(stud.res);
+            
+        </script>
+    <p>Q3. Check whether the Package is Dream Package or not</p>
+    <script>
+        let package = 9;
+
+        check_package={
+            salary:"",
+            set income(income){
+                this.salary = income;
+            },
+            get inco(){
+                if(this.salary <= 5){
+                    return "This is a dream Job";
+                }else{
+                    return "This is not a Dream Job";
+                }
+            }
+        }
+        document.write(check_package.inco);
+    </script>
+
+    <p>Q4. Check whether the Object has a parameter or not </p>
+    <script>
+        let count = 2;
+
+        let obj = {
+            check:function(){
+                for(let x in obj){
+                    count++;
+                }
+                if (count==1) {
+                    document.write("False");
+                }else{
+                    document.write("True");
+                }
+            }
+        }
+        obj.check();
+    </script>
+
+    <p>Q5. Merge the Object</p>
+    <script>
+        let obj1 = {
+            fname: "Abhay",
+        }
+        let obj2 = {
+            lanme: "Gupta",
+        }
+        let obj3 = obj1.fname + " " + obj2.lanme;
+        document.write(obj3);
+
+        const obj4 = {
+            merge:function(){
+                document.write(obj1.fname+" "+obj2.lanme);
+            }
+        }
+        obj4.merge();
+    </script>
+
+    <p>Q6. Object Multiplyer </p>
+
+    <script>
+        
+        const multi={
+            N : "",
+            id:12,
+            Hno:101,
+            set n(n){
+                this.N = n
+            },
+            get n(){
+                return `${this.id*this.N} \n ${this.Hno*this.N}`;
+            }
+        }
+        multi.N=3;
+        document.write(multi.n);
+    </script>
+
+    <p>Q7. Find the sum of Object Members </p>
+    <script>
+        let obj5={
+            n1:12,
+            n2:16,
+            n3:20,
+            get sum(){
+                return `${this.n1+this.n2+this.n3}`;
+            }
+        }
+        document.write(obj5.sum);
+    </script>
+
+    <p>Q8. Check whether the Objects are same or not. </p>
+    <script>
+      
+
+        const obj6={
+            Name:"Abhay",
+            age:27,
+            get check_obj(){
+                if(this.Name.toUpperCase === this.check_Name.toUpperCase && this.age === this.check_age)
+                {
+                    return `True`;
+                }
+                else 
+                {
+                    return `False`;
+                }
+            }
+        }
+        obj6.check_Name = "Abhay";
+        obj6.check_age = 27;
+        document.write(obj6.check_obj);
+    </script>
+</body>
+</html>

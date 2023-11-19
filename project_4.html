@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4</title>
+</head>
+<body>
+    <p>Q.1 Check whether the year is Leap year or not.</p>
+    <script>
+        let check_yaer=(year)=>{
+            return(year%100 == 0 ) ? (year%400 === 0):(year%4 === 0);
+        }
+        document.write(check_yaer(2006));
+        document.write(check_yaer(2008));
+        document.write(check_yaer(2010));
+        document.write(check_yaer(2012));
+    </script>
+
+    <p>Q2. Perfect Number Check.</p>
+    <script>
+       
+        function is_perfect(num) {
+            let temp = 0;
+            for (let i = 1; i <= num/2; i++) {
+                if (num%i == 0) {
+                temp+= i;
+                }
+            }
+            if (temp === num && temp !== 0) {
+                    document.write("This is Perfect Number");
+                }else{
+                    document.write("This is not Perfect Number");
+                }
+        }   
+        is_perfect(28);
+    </script>
+
+    <p>Q3. Reverse a Number. Exmp : = 987654321;</p>
+    <script>
+            let num1 = 987654321;
+            let result = num1.toString().split('').reverse().join("");
+            document.write(result);
+    </script>
+
+
+    <p>Q4.Questions of Array</p>
+    <script>
+        let arr = [22, 15,23,45];
+        
+        for(let i=0; i<arr.length; i++){
+            document.write(arr[i]+ " " + "<br>");
+        }
+
+        let arr1 = new Array();
+        arr1[0] = "Abhay";
+        arr1[1] = "Mohit";
+        arr1[2] = "Nipun";
+        arr1[3] = "Harshit";
+
+        for(let i=0; i<arr1.length; i++){
+            document.write(arr1[i]+ " " + "<br>")
+        }
+        document.write("This is 2nd array of list"+arr1[2] + "<br>");
+
+        let space = "";
+        let arr2 = new Array("Abhya",  "Nipun", "Mohit", "Harshit");
+        for(let i=0; i<arr1.length; i++){
+            space+=arr2[i];
+        }
+        document.write(space);
+    </script>
+
+    <p>Q1 . Find the Product.</p>
+    <script>
+            
+            find_pro=()=>{
+
+                let arr1 = new Array(1,2,3,4,5,6);
+                let product = 1;
+                
+                for(let i=0; i<arr1.length; i++){
+                    product*=arr1[i];
+                }
+                return document.write("The Product Of Array" + " "  +  product)
+            }
+            find_pro();
+    </script>
+
+    <p>Q2 . Find the sum.</p>
+    <script>
+        let arr3 = new Array(1,2,3,4,5,6);
+        let sum = 0;
+        find_sum=(arr3)=>{
+            for(let i=0; i<arr3.length; i++){
+                sum+=arr3[i];
+            }
+            return document.write("The Sum Of Array" + " "  +  sum)
+        }
+        find_sum(arr3);
+    </script>
+
+    <p>Q3. Count Occurrences exp: 1,2,1,5,3,5,1</p>
+
+    <script>
+         let arr4 = new Array(1,2,1,5,3,5,1);   
+            let count = 0
+        find_occu=(num)=>{
+
+            for(let i=0 ; i<arr4.length; i++){
+                if (num == arr4[i]) {
+                    count++;
+                }
+            }
+            return document.write("The Occueerences Number of " + num + " is " + count);
+        }
+        find_occu(1, arr4);
+    </script>
+
+    <p>Q4.Sum Of Even Odd </p>
+    <script>
+        let arr5 = new Array(1,2,3,4,5,6,7,8,9);
+        let array = new Array(0,0);
+        oddeven=(arr5, array)=>{
+            for(let i=0; i<arr5.length; i++){
+                if (arr5[i]%2 == 0) {
+                    array[0] += arr5[i];
+                }else{
+                    array[1] += arr5[i];
+                }
+            }
+            return document.write("Sum of Even Number " + array[0] + " Sum Of Odd Number " + array[1]);
+        }
+        oddeven(arr5, array);
+    </script>
+
+    <p>Q5. Find whether the number is present or not </p>
+    <script>
+        let per = new Array(1,2,3,4,5,6);
+        find_num=(num, per)=>{
+            for(let i=0; i<per.length; i++){
+                if(num == per[i]){
+                    return document.write("Yes");
+                    break
+                }
+            }
+            return document.write("No");
+        }
+        find_num(5, per);
+    </script>
+
+    <p>Q6.Find Higher Age </p>
+    <script>
+        let age = new Array(18,14,18,20,15);
+
+        find_age=()=>{
+
+            for(let i=0; i<age.length; i++){
+            
+                if (age[i]>=18) {
+                   return document.write("Your are 18 Plus " + `${age[i]}`);
+                   break; 
+                }else{
+                    return document.write("Sorry Your Not 18 Plus " + age[i]);
+                }
+            }
+        }
+        find_age(age);
+    </script>
+
+    <p>Q7. Increment the Array Elements </p>
+    <script>
+        let increment = new Array(1,2,1,4,5,3,6,5);
+
+        ince_arr=()=>{
+            let temp;
+            for(let i=0; i<increment.length; i++){
+                for(let j=i+1; j<increment.length; j++){
+                    if (increment[i] > increment[j]) {
+                        temp = increment[i];
+                        increment[i] = increment[j];
+                        increment[j] = temp;
+                    }
+                }
+            }
+            for(let i=0; i<increment.length; i++){
+                document.write(increment[i])
+            }
+        }
+        ince_arr(increment);
+    </script>
+
+    <p>Q8. Pass or Fail </p>
+    <script>
+        let results = new Array(33,33,80,99);
+        find_result=()=>{
+            for(let i=0; i<results.length; i++){
+                if (results[i]<32) {
+                    return document.write("Your Fail the Test");
+                }
+            }
+            return document.write("Your Pass The Test");
+        }
+        find_result(results);
+    </script>
+
+    <p>Q10. Min and Max value</p>
+    <script>
+        let mix = new Array(21,23,56,184,5,98,99);
+        let min = mix[0];
+        let max = mix[0];
+
+        find_min_max=()=>{
+            for(let i=0; i<mix.length; i++){
+                if (mix[i]>max) {
+                    max = mix[i];
+                }else if (min>mix[i]){
+                    min = mix[i]
+                }
+            }
+            return document.write("The Maxmimum Value "+ max + " The Minimum Value " + min);
+        }
+        find_min_max(mix)
+    </script>
+</body>
+</html>
